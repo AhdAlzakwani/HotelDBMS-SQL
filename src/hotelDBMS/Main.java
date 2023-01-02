@@ -42,16 +42,26 @@ public class Main {
 				
 				break;
 			case 2:
-				
-				hotel.insertIntoTable(10000);
+				int number = scanner.nextInt();
+				hotel.insertIntoTable(number);
 				break;
 			case 3:
-				hotel.insertIntoTable(1);
+				System.out.println(" how many number of rows are to be inserted");
+				int numbers = scanner.nextInt();
+				hotel.insertIntoTable(numbers);
 				break;
 			case 4:
-				hotel.readFromTable();
+				hotel.readFromTable(10);
 				break;
 			case 5:
+				System.out.println(" which row you want to update ? Enter id");
+				  int id = scanner.nextInt();
+				hotel.updateById(id);
+				break;
+			case 6:
+				System.out.println(" how many informatoin You want");
+				int infonumbers = scanner.nextInt();
+				hotel.readFromTable(infonumbers);
 				break;
 
 			}
