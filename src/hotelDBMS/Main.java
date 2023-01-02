@@ -49,6 +49,7 @@ public class Main {
 				hotel.insertIntoTable(1);
 				break;
 			case 4:
+				hotel.readFromTable();
 				break;
 			case 5:
 				break;
