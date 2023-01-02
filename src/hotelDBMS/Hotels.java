@@ -1,12 +1,17 @@
 package hotelDBMS;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.Statement;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Hotels {
+
 public static void createHotalTable() {
+
 	String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
 	String user = "sa";
 	String pass = "root";
@@ -39,4 +44,77 @@ public static void createHotalTable() {
 	
 
 }
+
+public static void readFromTable(){
+	
+	
+	}
+	
+public static void getById(){
+	
+	}
+
+public static void updateById(){
+	
+	}
+
+public static void deleteById() {
+	
+	}
+
+public static void makeIsActiveFalseById() {
+}
+
+public static void insertIntoTable(int number ){
+	Scanner scanner = new Scanner(System.in);
+	System.out.println(" how many number of rows are to be inserted");
+	 number = scanner.nextInt();
+try {
+	String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
+
+	String user = "sa";
+	String pass = "root";
+	String hotel_name = "AHD";
+	String hotel_location = "ZAK";
+	String created_date = "1-11-2022";
+	String updated_date = "5-2-2023";
+	String is_Active = "true";
+	
+	
+	int min = 50;
+    int max = 100;
+    Random rn = new Random();
+	Integer numberToAdd = rn.nextInt(10);
+	  for(int i = 0; i<=number; i++ ) {
+	String sqlDBss = "INSERT INTO Hotels VALUES(" + i+numberToAdd + ",'" + (hotel_name + i) + "','" + (hotel_location + i) + "','"
+			+ created_date + "','"+updated_date+"','"+is_Active+"')";
+	
+
+	Connection conn = null;
+
+	Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+	DriverManager.registerDriver(driver);
+	conn = DriverManager.getConnection(url, user, pass);
+
+	Statement st = conn.createStatement();
+
+	int m = st.executeUpdate(sqlDBss);
+
+	if (m >= 1) {
+		System.out.println("Values Inserted in given Table...");
+
+	} else {
+		System.out.println(" Values already Inserted in given database...");
+	}
+
+	conn.close();
+	  }
+
+} catch (Exception ex) {
+	System.err.println(ex);
+}
+
+
+	
+	}
 }
