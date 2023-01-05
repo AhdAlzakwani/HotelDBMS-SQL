@@ -297,7 +297,6 @@ public class Room_Type {
 		
 		
 		String room_type_name = "AHD";
-		String hotel_location = "ZAK";
 		String created_date = "1-11-2022";
 		String updated_date = "5-2-2023";
 		String is_Active = "true";
