@@ -88,7 +88,7 @@ public class Main {
 
 						break;
 					case 3:
-
+						hm.guestsCount();
 						break;
 					case 4:
 
