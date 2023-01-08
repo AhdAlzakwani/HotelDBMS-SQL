@@ -295,16 +295,18 @@ public class Room_Type {
 		String user = "sa";
 		String pass = "root";
 		
+		Scanner scanner = new Scanner(System.in);
 		
-		String room_type_name = "AHD";
 		String created_date = "1-11-2022";
 		String updated_date = "5-2-2023";
 		String is_Active = "true";
 
 	    Random rn = new Random();
 		Integer numberToAdd = rn.nextInt(10);
-		  for(int i = 0; i<=number; i++ ) {
-		String sqlDBss = "INSERT INTO Room_Type VALUES(" + i+numberToAdd + ",'" + (room_type_name + i) + "','"
+		  for(int i = 1; i<=number; i++ ) {
+			  System.out.println("Enter Room Type Name : ");
+				String room_type_name = scanner.next();
+		String sqlDBss = "INSERT INTO Room_Type VALUES(" + i+numberToAdd + ",'" + room_type_name  + "','"
 				+ created_date + "','"+updated_date+"','"+is_Active+"')";
 		
 

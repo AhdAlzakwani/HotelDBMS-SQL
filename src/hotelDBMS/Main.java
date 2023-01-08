@@ -24,22 +24,22 @@ public class Main {
 
 			case 1:
 
-//				hotel.createHotalTable();
-//
-//				Room_Type roomType = new Room_Type();
-//				roomType.createRoomTypeTable();
+				hotel.createHotalTable();
 
-//				Rooms room = new Rooms();
-//				room.createRoomTable();
-//
+				Room_Type roomType = new Room_Type();
+				roomType.createRoomTypeTable();
+
+				Rooms room = new Rooms();
+				room.createRoomTable();
+
 				Guests guests = new Guests();
 				guests.createGuestsTable();
-//
-//				Employee_Type eType = new Employee_Type();
-//				eType.createEmployeeTypeTable();
-//
-//				Employees employees = new Employees();
-//				employees.createEmployeesTable();
+
+				Employee_Type eType = new Employee_Type();
+				eType.createEmployeeTypeTable();
+
+				Employees employees = new Employees();
+				employees.createEmployeesTable();
 
 				break;
 			case 2:
@@ -91,13 +91,14 @@ public class Main {
 						hm.guestsCount();
 						break;
 					case 4:
-
+						hm.gustActive();
 						break;
 					case 5:
+						hm.roomActive();
 
 						break;
 					case 6:
-
+						hm.countId();
 						break;
 					case 7:
 						submenuExit = false;
@@ -107,10 +108,13 @@ public class Main {
 				}
 				break;
 			case 8:
-				Employees employee = new Employees();
-				employee.insertIntoTable(20);
-				Rooms rooms = new Rooms();
-				rooms.insertIntoTable(5);
+//				Employees employee = new Employees();
+//				employee.insertIntoTable(20);
+//				Rooms rooms = new Rooms();
+//				rooms.insertIntoTable(5);
+				Room_Type room_Type = new Room_Type();
+				int room_type_number = scanner.nextInt();
+				room_Type.insertIntoTable(room_type_number);
 
 				break;
 			case 9:

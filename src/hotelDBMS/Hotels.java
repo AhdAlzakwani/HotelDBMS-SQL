@@ -169,7 +169,7 @@ try {
 		System.out.println("Values updated in given Table...");
 
 	} else {
-		System.out.println(" Values already updated in given database...");
+		System.out.println("Values already updated in given database...");
 	}
 
 	conn.close();
